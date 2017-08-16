@@ -2,7 +2,7 @@
 
 ## Overview
 
-This folder provides a neat little dev-environment in a can.   Useful for developing sites and applications for JRA.
+This folder provides a neat little dev-environment in a can.   Useful for developing Pentaho platform, components, apps, plugins, and extensions.
 
 Basically, it is a vagrant VM running Ubuntu Linux that is pre-configured with a lot of useful tools.  
 

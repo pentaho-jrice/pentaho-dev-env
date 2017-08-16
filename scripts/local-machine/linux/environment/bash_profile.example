@@ -1,0 +1,42 @@
+# ------------------------------------------------------------------------------------------------------
+# Example bash_profile for local machine.
+# The dev env VM can be configured by setting environment variables on local machine.
+# This file contains all those variables
+# ------------------------------------------------------------------------------------------------------
+
+export AWS_ACCESS_KEY=<your-access-key>
+export AWS_SECRET_KEY=<your-secret-key>
+
+export DEV_ENV_LOCAL_GIT_PROJECTS_DIR=~/dev-env/git/
+export DEV_ENV_LOCAL_APPS_DIR=~/dev-env/apps/
+export DEV_ENV_LOCAL_MAVEN_CONF_DIR=~/dev-env/maven/conf/
+export DEV_ENV_LOCAL_MAVEN_REPO_DIR=~/dev-env/maven/.m2
+export DEV_ENV_LOCAL_AWS_DIR=~/dev-env/aws/
+export DEV_ENV_LOCAL_AWS_KEY_FILE_DIR=~/dev-env/aws-keys/
+export DEV_ENV_LOCAL_SHARE_DIR=~/dev-env/share/
+
+export DEV_ENV_VM_GIT_PROJECTS_DIR=/home/vagrant/git
+export DEV_ENV_VM_APPS_DIR=/home/vagrant/workspace/apps
+export DEV_ENV_VM_MAVEN_CONF_DIR=/home/vagrant/workspace/maven/conf
+export DEV_ENV_VM_MAVEN_REPO_DIR=/home/vagrant/.m2
+export DEV_ENV_VM_AWS_DIR=/home/vagrant/.aws
+export DEV_ENV_VM_AWS_KEY_FILE_DIR=/home/vagrant/aws-keys
+export DEV_ENV_VM_SHARE_DIR=/home/vagrant/share
+
+export DEV_ENV_AWS_KEY_FILE_NAME=pentaho-build.pem
+
+export DEV_ENV_AWS_KEY_FILE_PATH=/home/vagrant/aws-keys/pentaho-build.pem
+
+export PENTAH_HOME=/usr/local/pentaho
+
+export PENTAHO_SERVER_HOME_EE=/usr/local/pentaho/ee
+export PENTAHO_SERVER_HOME_CE=/usr/local/pentaho/ce
+
+export PENTAHO_KETTLE_HOME_EE=
+export PENTAHO_KETTLE_HOME_CE=
+
+export SCRIPTS_DIR_COMMON=$DEV_ENV_LOCAL_GIT_PROJECTS_DIR/pentaho-dev-env/scripts/common/linux
+export SCRIPTS_DIR_LOCAL=$DEV_ENV_LOCAL_GIT_PROJECTS_DIR/pentaho-dev-env/scripts/local-machine/linux
+export SCRIPTS_DIR_DEV_VM=$DEV_ENV_LOCAL_GIT_PROJECTS_DIR/pentaho-dev-env/scripts/dev-vm/linux
+
+export PATH=$PATH:$SCRIPTS_DIR_COMMON:$SCRIPTS_DIR_DEV_VM

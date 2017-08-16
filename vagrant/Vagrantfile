@@ -18,7 +18,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
 
   config.vm.provider :virtualbox do |vb|
-    vb.name = "JRA Dev Environment"
+    vb.name = "Pentaho Dev Environment"
     vb.customize ["modifyvm", :id, "--memory", "2000"]
   end
 
@@ -44,7 +44,7 @@ Vagrant.configure(2) do |config|
   default_vm_aws_key_file_dir = "/home/vagrant/aws-keys"
   default_vm_share_dir = "/home/vagrant/share"
 
-  default_aws_key_file_name = "jra-build.pem"
+  default_aws_key_file_name = "pentaho-build.pem"
   
   # -----------------------------------------------------------------------------------------------------------------------------------------------
   # Set Variables to be used for local machines and dev env VMs.

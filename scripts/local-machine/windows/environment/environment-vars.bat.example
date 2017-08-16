@@ -1,0 +1,42 @@
+# ------------------------------------------------------------------------------------------------------
+# Example bash_profile for local machine.
+# The dev env VM can be configured by setting environment variables on local machine.
+# This file contains all those variables
+# ------------------------------------------------------------------------------------------------------
+
+setx -m AWS_ACCESS_KEY <your-access-key>
+setx -m AWS_SECRET_KEY <your-secret-key>
+
+setx -m DEV_ENV_LOCAL_GIT_PROJECTS_DIR ~\dev-env\git
+setx -m DEV_ENV_LOCAL_APPS_DIR ~\dev-env\apps
+setx -m DEV_ENV_LOCAL_MAVEN_CONF_DIR ~\dev-env\maven\conf
+setx -m DEV_ENV_LOCAL_MAVEN_REPO_DIR ~\dev-env\maven\.m2
+setx -m DEV_ENV_LOCAL_AWS_DIR ~\dev-env\aws
+setx -m DEV_ENV_LOCAL_AWS_KEY_FILE_DIR ~\dev-env\aws-keys
+setx -m DEV_ENV_LOCAL_SHARE_DIR ~\dev-env\share
+
+setx -m DEV_ENV_VM_GIT_PROJECTS_DIR /home/vagrant/git
+setx -m DEV_ENV_VM_APPS_DIR /home/vagrant/workspace/apps
+setx -m DEV_ENV_VM_MAVEN_CONF_DIR /home/vagrant/workspace/maven/conf
+setx -m DEV_ENV_VM_MAVEN_REPO_DIR /home/vagrant/.m2
+setx -m DEV_ENV_VM_AWS_DIR /home/vagrant/.aws
+setx -m DEV_ENV_VM_AWS_KEY_FILE_DIR /home/vagrant/aws-keys
+setx -m DEV_ENV_VM_SHARE_DIR /home/vagrant/share
+
+setx -m DEV_ENV_AWS_KEY_FILE_NAME pentaho-build.pem
+
+setx -m DEV_ENV_AWS_KEY_FILE_PATH /home/vagrant/aws-keys/pentaho-build.pem
+
+setx -m PENTAHO_SERVER_HOME_EE C:\dev\8.0-QAT-224\ee\pentaho-server
+setx -m PENTAHO_SERVER_HOME_CE C:\dev\8.0-QAT-224\ce\pentaho-server
+
+setx -m PENTAHO_KETTLE_HOME_EE C:\dev\8.0-QAT-229\ee\data-integration
+setx -m PENTAHO_KETTLE_HOME_CE C:\dev\8.0-QAT-224\ce\data-integration
+
+setx -m PENTAHO_UTIL_HOME C:\dev\util
+
+setx -m SCRIPTS_DIR_COMMON %DEV_ENV_LOCAL_GIT_PROJECTS_DIR%\pentaho-dev-env\scripts\common\windows
+setx -m SCRIPTS_DIR_LOCAL %DEV_ENV_LOCAL_GIT_PROJECTS_DIR%\pentaho-dev-env\scripts\local-machine\windows
+setx -m SCRIPTS_DIR_DEV_VM %DEV_ENV_LOCAL_GIT_PROJECTS_DIR%\pentaho-dev-env\scripts\dev-vm\windows
+
+setx -m PATH "%PATH%";%SCRIPTS_DIR_COMMON%;%SCRIPTS_DIR_DEV_VM%;%SCRIPTS_DIR_LOCAL%
