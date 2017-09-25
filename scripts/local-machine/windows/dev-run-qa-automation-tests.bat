@@ -12,6 +12,6 @@ echo on
 
 SET SCRIPT_DIR=%~dp0
 
-java -jar %PENTAHO_UTIL_HOME%\ShimConfig-1.0.6-jar-with-dependencies.jar ^
-C:\Users\jrice\.pentaho\dev\user-config\shim-config-values-cdh511.properties
-REM C:\Users\jrice\.pentaho\dev\user-config\shim-config-values-cdh511.properties
+cd C:\git\pentaho\qa-automation
+
+mvn -Dsuite=SDK/PDI_SmokeTest_RepositoryExplorer -Durl=http://localhost:8080/pentaho -Dpentaho_sdk_version=8.0-QAT-291 -Dpentaho_home=C:\dev\dist\8.0-QAT-291\ee -Dpentaho.installed.licenses.file=C:\dev\dist\8.0-QAT-291\ee\.installedLicenses.xml clean test

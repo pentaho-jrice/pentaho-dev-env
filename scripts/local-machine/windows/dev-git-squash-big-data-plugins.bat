@@ -11,7 +11,8 @@ REM ----------------------------------------------------------------------------
 echo on
 
 SET SCRIPT_DIR=%~dp0
+set COMMIT_ID_TO_SQASH=%1
 
-java -jar %PENTAHO_UTIL_HOME%\ShimConfig-1.0.6-jar-with-dependencies.jar ^
-C:\Users\jrice\.pentaho\dev\user-config\shim-config-values-cdh511.properties
-REM C:\Users\jrice\.pentaho\dev\user-config\shim-config-values-cdh511.properties
+cd %DEV_ENV_LOCAL_GIT_PROJECTS_DIR%\big-data-plugin
+
+git reset --soft %COMMIT_ID_TO_SQASH%

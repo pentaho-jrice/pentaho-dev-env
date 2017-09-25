@@ -10,8 +10,14 @@ REM   com-start-pentaho-server-ce.bat C:\Pentaho\server\pentaho-server
 REM ------------------------------------------------------------------------------------------------------
 echo on
 
-SET SCRIPT_DIR=%~dp0
+set VERSION_NUM=%1
 
-java -jar %PENTAHO_UTIL_HOME%\ShimConfig-1.0.6-jar-with-dependencies.jar ^
-C:\Users\jrice\.pentaho\dev\user-config\shim-config-values-cdh511.properties
-REM C:\Users\jrice\.pentaho\dev\user-config\shim-config-values-cdh511.properties
+setx -m PENTAHO_VERSION_NUM %VERSION_NUM%
+
+setx -m PENTAHO_SERVER_HOME_CE C:\dev\dist\8.0-QAT-%VERSION_NUM%\ce\pentaho-server
+
+setx -m PENTAHO_SERVER_HOME_EE C:\dev\dist\8.0-QAT-%VERSION_NUM%\ee\server\pentaho-server
+setx -m PENTAHO_SERVER_HOME_CE C:\dev\dist\8.0-QAT-%VERSION_NUM%\ce\pentaho-server
+
+setx -m PENTAHO_KETTLE_HOME_EE C:\dev\dist\8.0-QAT-%VERSION_NUM%\ee\design-tools\data-integration
+setx -m PENTAHO_KETTLE_HOME_CE C:\dev\dist\8.0-QAT-%VERSION_NUM%\ce\data-integration

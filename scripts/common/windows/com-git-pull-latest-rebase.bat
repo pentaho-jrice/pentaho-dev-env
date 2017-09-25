@@ -10,8 +10,21 @@ REM   com-start-pentaho-server-ce.bat C:\Pentaho\server\pentaho-server
 REM ------------------------------------------------------------------------------------------------------
 echo on
 
-SET SCRIPT_DIR=%~dp0
+cd %1
 
-java -jar %PENTAHO_UTIL_HOME%\ShimConfig-1.0.6-jar-with-dependencies.jar ^
-C:\Users\jrice\.pentaho\dev\user-config\shim-config-values-cdh511.properties
-REM C:\Users\jrice\.pentaho\dev\user-config\shim-config-values-cdh511.properties
+echo .
+echo .
+echo .
+echo About to refresh git for '%1'
+echo .
+echo .
+git status
+echo .
+echo .
+git fetch upstream
+echo .
+echo .
+git rebase upstream/master
+echo .
+echo .
+git push origin master

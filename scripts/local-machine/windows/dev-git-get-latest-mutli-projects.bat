@@ -18,4 +18,8 @@ echo -------------------- 1 - %OUTPUT_DIR%
 
 SET PROJECT_NAME=pentaho-platform
 
-call %SCRIPT_DIR%\..\..\common\windows\com-get-dependency-tree.bat %PROJECT_NAME% %OUTPUT_DIR%
+call %SCRIPT_DIR%\..\..\common\windows\com-git-pull-latest-rebase.bat %DEV_ENV_LOCAL_GIT_PROJECTS_DIR%\big-data-plugin
+call %SCRIPT_DIR%\..\..\common\windows\com-git-pull-latest-rebase.bat %DEV_ENV_LOCAL_GIT_PROJECTS_DIR%\pentaho-big-data-ee
+call %SCRIPT_DIR%\..\..\common\windows\com-git-pull-latest-rebase.bat %DEV_ENV_LOCAL_GIT_PROJECTS_DIR%\pentaho-osgi-bundles
+call %SCRIPT_DIR%\..\..\common\windows\com-git-pull-latest-rebase.bat %DEV_ENV_LOCAL_GIT_PROJECTS_DIR%\pentaho-platform-ee
+call %SCRIPT_DIR%\..\..\common\windows\com-git-pull-latest-rebase.bat %DEV_ENV_LOCAL_GIT_PROJECTS_DIR%\pentaho-platform
