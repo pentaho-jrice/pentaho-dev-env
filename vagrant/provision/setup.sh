@@ -59,6 +59,13 @@ sudo ln -s /home/vagrant/workspace/.aws /home/vagrant/.aws
 complete -C '/usr/local/aws/bin/aws_completer' aws
 
 echo "."
+echo "*********************************************************************************"
+echo "   installing node.js"
+echo "*********************************************************************************"
+sudo curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install nodejs -y 
+
+echo "."
 echo "*********************************************************************************
 echo "   Installing Pip"
 echo "*********************************************************************************

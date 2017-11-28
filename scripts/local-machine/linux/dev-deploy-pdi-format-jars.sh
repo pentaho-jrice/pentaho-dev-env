@@ -1,11 +1,10 @@
 #!/bin/sh
 set -x
 
-TARGET_VERSION=8.0-QAT-$PENTAHO_VERSION_NUM
-SPOON=/c/dev/dist/$TARGET_VERSION/ee/data-integration
+SPOON=/c/dev/dist/8.1.0.0-64/ee/data-integration
 GIT_HOME_DIR=/c/git/pentaho
 SOURCE_VER=8.0-SNAPSHOT
-DEST_VER=$TARGET_VERSION
+DEST_VER=8.1.0.0-64
 
 rm -rf $SPOON/system/karaf/caches/
 

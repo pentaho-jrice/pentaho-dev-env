@@ -14,4 +14,5 @@ SET SCRIPT_DIR=%~dp0
 
 cd C:\git\pentaho\qa-automation
 
-mvn -Dsuite=SDK/PDI_SmokeTest_RepositoryExplorer -Durl=http://localhost:8080/pentaho -Dpentaho_sdk_version=8.0-QAT-291 -Dpentaho_home=C:\dev\dist\8.0-QAT-291\ee -Dpentaho.installed.licenses.file=C:\dev\dist\8.0-QAT-291\ee\.installedLicenses.xml clean test
+mvn  -Dsuite=SDK/PDI_SmokeTest_RepositoryExplorer -Dpentaho_sdk_version=$PENTAHO_VERSION_NUM -Dpentaho_home=C:\dev\dist\$PENTAHO_VERSION_NUM-install -Dpentaho.installed.licenses.file=C:\dev\dist\$PENTAHO_VERSION_NUM-install\.installedLicenses.xml test
+REM mvn -o -Dmaven.surefire.debug="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8046 -Xnoagent -Djava.compiler=NONE"  -Dsuite=SDK/PDI_SmokeTest_RepositoryExplorer -Durl=http://localhost:8080/pentaho -Dpentaho_sdk_version=$PENTAHO_VERSION_NUM -Dpentaho_home=C:\dev\dist\$PENTAHO_VERSION_NUM-install -Dpentaho.installed.licenses.file=C:\dev\dist\$PENTAHO_VERSION_NUM-install\.installedLicenses.xml test

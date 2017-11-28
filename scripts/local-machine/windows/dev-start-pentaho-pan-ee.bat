@@ -12,6 +12,4 @@ echo on
 
 SET SCRIPT_DIR=%~dp0
 
-java -jar %PENTAHO_UTIL_HOME%\ShimConfig-1.0.6-jar-with-dependencies.jar ^
-C:\Users\jrice\.pentaho\dev\user-config\shim-config-values-cdh512.properties
-REM C:\Users\jrice\.pentaho\dev\user-config\shim-config-values-cdh512.properties
+call %SCRIPT_DIR%\..\..\common\windows\com-start-pentaho-pan.bat %PENTAHO_KETTLE_HOME_EE%
